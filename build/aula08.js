@@ -5,5 +5,5 @@ let pessoa = {
     idade: 30,
     status: 'Ativo'
 };
-console.log(pessoa);
+console.log(pessoa.nome);
 console.log(typeof pessoa);

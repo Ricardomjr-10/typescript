@@ -1,9 +1,9 @@
 // type objects
-let pessoa:object = {
+let pessoa = {
     nome: 'Luiz',
     idade: 30,
     status: 'Ativo'
 }
 
-console.log(pessoa)
+console.log(pessoa.nome)
 console.log(typeof pessoa)
