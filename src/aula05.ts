@@ -1,6 +1,16 @@
-//union types
-let cursos: string[] = ['Javascript', 'typescript', 'c++']
+//union types - tipos diferentes na mesma variavel
+//let vteste: string | number | boolean
+let vteste: any
+vteste = 'luiz'
+vteste = 10
+vteste = true
+
+let cursos: any[] = ['Javascript', 'typescript', 'c++',100,false]
+let valores = [10, 20, 30]
 
 cursos.push('python')
+valores.push(40)
 
 console.log(cursos)
+console.log(valores)
+console.log(vteste)
