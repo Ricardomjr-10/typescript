@@ -14,3 +14,4 @@ console.log(typeof pessoa)
 
 pessoa.ola()
 pessoa.info('Ricardo')
+pessoa.info(pessoa.nome)
