@@ -2,7 +2,8 @@
 let pessoa = {
     nome: 'Luiz',
     idade: 30,
-    status: 'Ativo'
+    status: 'Ativo',
+    ola: () => console.log('Olá')
 }
 
 pessoa.nome = 'Maria'
