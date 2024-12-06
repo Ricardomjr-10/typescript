@@ -14,4 +14,8 @@ function soma2(n1:number, n2:number):number{
 
 teste()
 logar('bruno', '123')
-console.log(soma2(10,20))
+
+let res:number = soma2(10,20)
+let sres:string = soma2(2,8).toString()
+console.log(res)
+console.log(sres)

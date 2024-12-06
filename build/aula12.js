@@ -12,4 +12,7 @@ function soma2(n1, n2) {
 }
 teste();
 logar('bruno', '123');
-console.log(soma2(10, 20));
+let res = soma2(10, 20);
+let sres = soma2(2, 8).toString();
+console.log(res);
+console.log(sres);
