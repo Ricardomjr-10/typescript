@@ -4,7 +4,9 @@ let nvalor;
 let svalor;
 let uvalor;
 uvalor = 10;
-svalor = '20';
+nvalor = 10;
+svalor = nvalor.toString();
+//nvalor = Number(svalor)
 // nvalor =<number>uvalor
 // svalor =<string>uvalor
 // svalor += 10

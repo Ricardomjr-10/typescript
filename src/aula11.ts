@@ -4,8 +4,11 @@ let svalor:string
 let uvalor:unknown
 
 uvalor = 10
-svalor = '20'
+nvalor = 10
 
+svalor = nvalor.toString()
+
+//nvalor = Number(svalor)
 // nvalor =<number>uvalor
 // svalor =<string>uvalor
 // svalor += 10
