@@ -27,3 +27,14 @@ var cores;
 })(cores || (cores = {}));
 console.log(cores.branco);
 console.log(cores['branco']);
+// enum sem especificar numero
+var tipoUsuario;
+(function (tipoUsuario) {
+    tipoUsuario[tipoUsuario["ADMIN"] = 10] = "ADMIN";
+    tipoUsuario[tipoUsuario["NORMAL"] = 100] = "NORMAL";
+    tipoUsuario[tipoUsuario["VISITANTE"] = 1000] = "VISITANTE";
+})(tipoUsuario || (tipoUsuario = {}));
+console.log(tipoUsuario.ADMIN);
+//enum como tipo
+const tp = tipoUsuario.ADMIN;
+console.log(tp);

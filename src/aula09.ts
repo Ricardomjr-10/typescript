@@ -29,3 +29,17 @@ enum cores {
 
 console.log(cores.branco)
 console.log(cores['branco'])
+
+// enum sem especificar numero
+
+enum tipoUsuario {
+    ADMIN=10,
+    NORMAL=100,
+    VISITANTE=1000
+}
+
+console.log(tipoUsuario.ADMIN)
+
+//enum como tipo
+const tp: tipoUsuario = tipoUsuario.ADMIN
+console.log(tp)
