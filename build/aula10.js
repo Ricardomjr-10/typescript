@@ -3,11 +3,11 @@
 //null - valor vazio - nulo
 // undefined - indefinido -sem valor associado
 let vnome;
-vnome = null;
+vnome = 'ricardo';
 console.log(vnome);
 let vnome2;
 vnome2 = null;
 console.log(vnome2);
-let vnome3;
-vnome3 = 10;
+let vnome3 = vnome; // so pode ser atribuido em tipos unknown e any
+let vnum = vnome3;
 console.log(vnome3);

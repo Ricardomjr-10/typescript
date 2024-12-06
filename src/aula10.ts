@@ -4,13 +4,13 @@
 
 
 let vnome: string | null 
-vnome = null
+vnome = 'ricardo'
 console.log(vnome)
 
 let vnome2: any
 vnome2 = null
 console.log(vnome2)
 
-let vnome3: unknown
-vnome3 = 10
+let vnome3: unknown= vnome // so pode ser atribuido em tipos unknown e any
+let vnum:any = vnome3
 console.log(vnome3)
