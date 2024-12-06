@@ -17,6 +17,8 @@ const data = new Date()
 // console.log(data.getDate())
 // console.log(diasSemana[data.getDay() + 1])
 
+
+//enum textual
 enum cores {
     branco = '#fff',
     preto = '#000',
@@ -24,3 +26,6 @@ enum cores {
     verde = '#0f0',
     vermelho = '#f00'
 }
+
+console.log(cores.branco)
+console.log(cores['branco'])

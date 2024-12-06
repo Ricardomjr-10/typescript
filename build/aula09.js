@@ -16,6 +16,7 @@ var diasSemana;
 const data = new Date();
 // console.log(data.getDate())
 // console.log(diasSemana[data.getDay() + 1])
+//enum textual
 var cores;
 (function (cores) {
     cores["branco"] = "#fff";
@@ -24,3 +25,5 @@ var cores;
     cores["verde"] = "#0f0";
     cores["vermelho"] = "#f00";
 })(cores || (cores = {}));
+console.log(cores.branco);
+console.log(cores['branco']);
