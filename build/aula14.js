@@ -1,5 +1,5 @@
 "use strict";
-teste();
-function teste() {
+const test = () => {
     console.log('Teste');
-}
+};
+test();

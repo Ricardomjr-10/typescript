@@ -1,5 +1,5 @@
-teste()
 
-function teste():void {
+const test = ():void => {
     console.log('Teste')
 }
+test()
