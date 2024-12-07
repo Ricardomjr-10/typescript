@@ -12,3 +12,13 @@ const soma1 = (n1:number, n2:number):number => {
 }
 
 console.log(soma1(25, 34))
+
+const somaArray = (n:number[]):number => {
+ let s: number = 0
+ n.forEach(e => {
+    s += e
+ })
+ return s
+}
+
+console.log(somaArray([1, 2, 3, 4, 5]))
