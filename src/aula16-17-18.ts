@@ -28,6 +28,6 @@ const comp2 = new Computador("comp2", 32, 5)
 const comp3 = new Computador("comp3", 128, 10)
 
 
-console.log(comp1)
-console.log(comp2)
-console.log(comp3)
+comp1.info()
+comp2.info()
+comp3.info()
