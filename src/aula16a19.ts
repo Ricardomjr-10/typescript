@@ -1,10 +1,10 @@
 //P.O.O - classes
 
 class Computador {
-        nome: string;
-        ram :number;
-        cpu :number
-        ligado: boolean
+        public nome: string;
+        private ram :number;
+        private cpu :number
+        private ligado: boolean
 
     constructor( nome:string, ram:number, cpu:number) {
         this.nome = nome;
@@ -39,6 +39,14 @@ comp1.ligar()
 comp3.ligar()
 comp1.desligar()
 
+comp1.nome = 'Rapidao'
+//comp1.ligado = true - nao pode alterar o valor da propriedade pois ela é privada
+
 comp1.info()
 comp2.info()
 comp3.info()
+
+//modificadores de acesso
+//public - padrao - fora da classe, dentro da classe e filhos
+//private - nao pode ser acessado fora da classe
+//protected - pode ser acessado dentro e fora da classe
