@@ -12,6 +12,10 @@ class Computador {
         this.cpu = cpu
         this.ligado = false
     }
+    //metodos
+    info():void {
+        console.log(`Nome: ${this.nome}`)
+    }
 }
 
 //instaciar uma classe
