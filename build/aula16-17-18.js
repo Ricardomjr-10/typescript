@@ -14,6 +14,10 @@ class Computador {
     //metodos
     info() {
         console.log(`Nome: ${this.nome}`);
+        console.log(`Ram: ${this.ram}`);
+        console.log(`CPU: ${this.cpu}`);
+        console.log(`Ligado: ${this.ligado}`);
+        console.log('------------------------');
     }
 }
 //instaciar uma classe

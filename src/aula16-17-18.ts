@@ -15,6 +15,10 @@ class Computador {
     //metodos
     info():void {
         console.log(`Nome: ${this.nome}`)
+        console.log(`Ram: ${this.ram}`)
+        console.log(`CPU: ${this.cpu}`)
+        console.log(`Ligado: ${this.ligado}`)
+        console.log('------------------------')
     }
 }
 
