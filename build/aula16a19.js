@@ -1,6 +1,7 @@
 "use strict";
 //P.O.O - classes
 class Computador {
+    id;
     nome;
     ram;
     cpu;
@@ -10,6 +11,7 @@ class Computador {
         this.ram = ram;
         this.cpu = cpu;
         this.ligado = false;
+        this.id = 0;
     }
     //metodos
     info() {
@@ -24,6 +26,14 @@ class Computador {
     }
     desligar() {
         this.ligado = false;
+    }
+    upRam(qtde) {
+        if (qtde >= 0 && qtde <= 1000) {
+            this.ram += qtde;
+        }
+        else {
+            console.log(`Quantidade ${qtde} para o computador ${this.nome} inválida`);
+        }
     }
 }
 //instaciar uma classe

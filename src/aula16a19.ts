@@ -1,6 +1,7 @@
 //P.O.O - classes
 
 class Computador {
+        private id: number
         public nome: string;
         private ram :number;
         private cpu :number
@@ -11,6 +12,7 @@ class Computador {
         this.ram = ram;
         this.cpu = cpu
         this.ligado = false
+        this.id = 0
     }
     //metodos
     info():void {
@@ -27,6 +29,14 @@ class Computador {
 
     desligar():void {
         this.ligado = false
+    }
+
+    upRam(qtde:number): void {
+        if (qtde >= 0 && qtde <= 1000) {
+            this.ram += qtde
+        } else {
+            console.log(`Quantidade ${qtde} para o computador ${this.nome} inválida`)
+        }
     }
 }
 
