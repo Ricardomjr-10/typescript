@@ -7,7 +7,10 @@ console.log(soma2(10, 20, 30));
 // rest
 function soma3(...n) {
     let s = 0;
-    n.forEach(e => s += e);
+    for (let e of n) {
+        s += e;
+    }
+    // n.forEach(e => s += e)
     return s;
 }
-console.log(soma3(10, 20));
+console.log(soma3(10, 20, 30, 40));
