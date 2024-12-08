@@ -5,7 +5,7 @@ class Computador {
         public nome: string;
         private ram :number;
         private cpu :number
-        private ligado: boolean
+        protected ligado: boolean
 
     constructor( nome:string, ram:number, cpu:number) {
         this.nome = nome;
@@ -52,6 +52,10 @@ comp1.desligar()
 comp1.nome = 'Rapidao'
 //comp1.ligado = true - nao pode alterar o valor da propriedade pois ela é privada
 
+
+comp1.upRam(-100)
+comp2.upRam(200)
+
 comp1.info()
 comp2.info()
 comp3.info()
@@ -59,4 +63,4 @@ comp3.info()
 //modificadores de acesso
 //public - padrao - fora da classe, dentro da classe e filhos
 //private - nao pode ser acessado fora da classe
-//protected - pode ser acessado dentro e fora da classe
+//protected - pode ser acessado dentro e em subclasses
