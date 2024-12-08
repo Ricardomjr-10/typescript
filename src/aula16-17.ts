@@ -4,15 +4,19 @@ class Computador {
     ram: number=0
     cpu: number=0
     ligado: boolean= true
+    
+    constructor(nome:string) {
+        this.nome = nome
+        console.log('objeto criado')
+    }
+
 }
 
-const comp1 = new Computador()
-const comp2 = new Computador()
-const comp3 = new Computador()
+//instaciar uma classe
+const comp1 = new Computador("comp1")
+const comp2 = new Computador("comp2")
+const comp3 = new Computador("comp3")
 
-comp1.nome = 'Rapidao'
-comp2.nome = 'Carao'
-comp3.nome = 'Gamer'
 
 console.log(comp1.nome)
 console.log(comp2.nome)

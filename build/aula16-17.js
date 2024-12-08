@@ -5,13 +5,15 @@ class Computador {
     ram = 0;
     cpu = 0;
     ligado = true;
+    constructor(nome) {
+        this.nome = nome;
+        console.log('objeto criado');
+    }
 }
-const comp1 = new Computador();
-const comp2 = new Computador();
-const comp3 = new Computador();
-comp1.nome = 'Rapidao';
-comp2.nome = 'Carao';
-comp3.nome = 'Gamer';
+//instaciar uma classe
+const comp1 = new Computador("comp1");
+const comp2 = new Computador("comp2");
+const comp3 = new Computador("comp3");
 console.log(comp1.nome);
 console.log(comp2.nome);
 console.log(comp3.nome);
