@@ -118,6 +118,7 @@ conta2.deposito(1000);
 conta2.saque(1000);
 // conta2.saque(1000)
 // conta2.saque(10)
+conta1.saldo = 300;
 console.log(conta2.saldo); //nao precisa dos paraenteses, por causa do get
 // conta3.deposito(10000)
 // conta3.deposito(10000)
