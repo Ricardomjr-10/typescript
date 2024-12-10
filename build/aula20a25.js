@@ -22,6 +22,9 @@ class Conta {
     get saldo() {
         return this.saldoConta;
     }
+    set saldo(saldoconta) {
+        this.saldoConta = saldoconta;
+    }
     deposito(valor) {
         if (valor < 0) {
             console.log('valor invalido');

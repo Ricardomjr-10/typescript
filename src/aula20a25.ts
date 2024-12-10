@@ -26,6 +26,10 @@ class Conta {
         return this.saldoConta
     }
 
+    set saldo(saldoconta:number){//seta o saldo
+        this.saldoConta = saldoconta
+    }
+
     protected deposito(valor: number) {
         if (valor < 0) {
             console.log('valor invalido')
