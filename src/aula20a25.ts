@@ -5,13 +5,13 @@ class Conta {
     protected titular: string
     private saldoConta: number
 
-    constructor( titular: string){
+    constructor(titular: string) {
         this.numero = this.gerarNumeroConta()
         this.titular = titular
         this.saldoConta = 0
     }
 
-    private gerarNumeroConta():number {
+    private gerarNumeroConta(): number {
         return Math.floor(Math.random() * 10000) + 1
     }
 
@@ -21,7 +21,7 @@ class Conta {
         console.log('------------------------')
     }
 
-    public saldo():number {
+    public saldo(): number {
         return this.saldoConta
     }
 
@@ -39,7 +39,7 @@ class Conta {
             return
         }
         if (valor <= this.saldoConta) {
-            this.saldoConta -= valor    
+            this.saldoConta -= valor
         } else {
 
             console.log('saldo insuficiente')
@@ -49,7 +49,7 @@ class Conta {
 
 class ContaPF extends Conta {//heredan caracteristicas da conta pai
     cpf: number
-    constructor(cpf:number, titular:string) {
+    constructor(cpf: number, titular: string) {
         super(titular)
         this.cpf = cpf
         console.log(`Conta PF criada:${titular}`) // atraves do proteced permiti o acesso
@@ -70,10 +70,10 @@ class ContaPF extends Conta {//heredan caracteristicas da conta pai
         }
     }
 
-    public saque (valor:number) {
+    public saque(valor: number) {
         if (valor > 1000) {
             console.log('saque não permitido, limite de saque R$ 1000')
-        }else {
+        } else {
             super.saque(valor)
         }
     }
@@ -81,7 +81,7 @@ class ContaPF extends Conta {//heredan caracteristicas da conta pai
 
 class ContaPJ extends Conta {//heredan caracteristicas da conta pai
     cnpj: number
-    constructor(cnpj:number, titular: string) {
+    constructor(cnpj: number, titular: string) {
         super(titular)
         this.cnpj = cnpj
         console.log(`Conta PJ criada:${titular}`)// ateaves do proteced permiti o acesso
@@ -102,7 +102,7 @@ class ContaPJ extends Conta {//heredan caracteristicas da conta pai
         }
     }
 
-    public saque (valor:number) {
+    public saque(valor: number) {
         if (valor > 10000) {
             console.log('saque não permitido, limite de saque R$ 10000')
         } else {
@@ -112,7 +112,7 @@ class ContaPJ extends Conta {//heredan caracteristicas da conta pai
 }
 
 const conta1 = new Conta('Breno')
-const conta2  = new ContaPF(1231212, 'Rafael')
+const conta2 = new ContaPF(1231212, 'Rafael')
 const conta3 = new ContaPJ(123124, 'Zuleide')
 
 // console.log(conta1, conta2)
@@ -124,11 +124,14 @@ const conta3 = new ContaPJ(123124, 'Zuleide')
 conta2.deposito(800)
 conta2.deposito(200)
 conta2.deposito(1000)
+conta2.saque(1000)
+conta2.saque(1000)
+conta2.saque(10)
 console.log(conta2.saldo())
 
-conta3.deposito(10000)
-conta3.deposito(10000)
-conta3.deposito(10000)
-conta3.deposito(10001)
-console.log(conta3.saldo())
+// conta3.deposito(10000)
+// conta3.deposito(10000)
+// conta3.deposito(10000)
+// conta3.deposito(10001)
+// console.log(conta3.saldo())
 
