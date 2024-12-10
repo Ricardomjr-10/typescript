@@ -1,6 +1,7 @@
 "use strict";
 //herança - classe que herda as mesmas caracteristicas da casse pai
 //acessando clase privada
+//setter e getter - setter setar o valor da propriedade, getter obter o valor da propriedade
 class Conta {
     numero;
     titular;
@@ -18,7 +19,7 @@ class Conta {
         console.log(`numero: ${this.numero}`);
         console.log('------------------------');
     }
-    saldo() {
+    get saldo() {
         return this.saldoConta;
     }
     deposito(valor) {
@@ -112,9 +113,9 @@ conta2.deposito(800);
 conta2.deposito(200);
 conta2.deposito(1000);
 conta2.saque(1000);
-conta2.saque(1000);
-conta2.saque(10);
-console.log(conta2.saldo());
+// conta2.saque(1000)
+// conta2.saque(10)
+console.log(conta2.saldo); //nao precisa dos paraenteses, por causa do get
 // conta3.deposito(10000)
 // conta3.deposito(10000)
 // conta3.deposito(10000)
