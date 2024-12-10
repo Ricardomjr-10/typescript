@@ -1,15 +1,15 @@
 //herança - classe que herda as mesmas caracteristicas da casse pai
-
+//acessando clase privada
 class Conta {
-    public numero: number
-    public titular: string
+    protected numero: number
+    protected titular: string
 
     constructor( titular: string){
         this.numero = this.gerarNumeroConta()
         this.titular = titular
     }
 
-    gerarNumeroConta():number {
+    private gerarNumeroConta():number {
         return Math.floor(Math.random() * 10000) + 1
     }
 }
@@ -19,6 +19,7 @@ class ContaPF extends Conta {//heredan caracteristicas da conta pai
     constructor(cpf:number, titular:string) {
         super(titular)
         this.cpf = cpf
+        console.log(`Conta PF criada:${titular}`) // atraves do proteced permiti o acesso
     }
 }
 
@@ -27,6 +28,7 @@ class ContaPJ extends Conta {//heredan caracteristicas da conta pai
     constructor(cnpj:number, titular: string) {
         super(titular)
         this.cnpj = cnpj
+        console.log(`Conta PJ criada:${titular}`)// ateaves do proteced permiti o acesso
     }
 }
 
