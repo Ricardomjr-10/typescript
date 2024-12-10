@@ -3,10 +3,12 @@
 class Conta {
     protected numero: number
     protected titular: string
+    private saldoConta: number
 
     constructor( titular: string){
         this.numero = this.gerarNumeroConta()
         this.titular = titular
+        this.saldoConta = 0
     }
 
     private gerarNumeroConta():number {
@@ -17,6 +19,20 @@ class Conta {
         console.log(`titular: ${this.titular}`)
         console.log(`numero: ${this.numero}`)
         console.log('------------------------')
+    }
+
+    public saldo():number {
+        return this.saldoConta
+    }
+
+    protected deposito(valor: number) {
+        this.saldoConta += valor
+    }
+
+    protected saque(valor: number) {
+        if (valor >= this.saldoConta) {
+            this.saldoConta -= valor    
+        }
     }
 }
 
@@ -29,6 +45,7 @@ class ContaPF extends Conta {//heredan caracteristicas da conta pai
     }
 
     info() {
+        console.log('tipo: PF')
         super.info()
         console.log(`CPF: ${this.cpf}`)
         console.log('------------------------')
@@ -44,6 +61,7 @@ class ContaPJ extends Conta {//heredan caracteristicas da conta pai
     }
 
     info() {
+        console.log('tipo: PJ')
         super.info()
         console.log(`CNPJ: ${this.cnpj}`)
         console.log('------------------------')
