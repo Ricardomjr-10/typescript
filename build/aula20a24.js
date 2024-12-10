@@ -22,6 +22,10 @@ class Conta {
         return this.saldoConta;
     }
     deposito(valor) {
+        if (valor < 0) {
+            console.log('valor invalido');
+            return;
+        }
         this.saldoConta += valor;
     }
     saque(valor) {
@@ -29,10 +33,12 @@ class Conta {
             console.log('valor invalido');
             return;
         }
-        if (valor >= this.saldoConta) {
+        if (valor <= this.saldoConta) {
             this.saldoConta -= valor;
         }
-        console.log('saldo insuficiente');
+        else {
+            console.log('saldo insuficiente');
+        }
     }
 }
 class ContaPF extends Conta {

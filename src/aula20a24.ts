@@ -26,6 +26,10 @@ class Conta {
     }
 
     protected deposito(valor: number) {
+        if (valor < 0) {
+            console.log('valor invalido')
+            return
+        }
         this.saldoConta += valor
     }
 
@@ -34,10 +38,12 @@ class Conta {
             console.log('valor invalido')
             return
         }
-        if (valor >= this.saldoConta) {
+        if (valor <= this.saldoConta) {
             this.saldoConta -= valor    
+        } else {
+
+            console.log('saldo insuficiente')
         }
-        console.log('saldo insuficiente')
     }
 }
 
