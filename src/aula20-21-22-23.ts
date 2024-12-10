@@ -33,6 +33,7 @@ class Conta {
         if (valor >= this.saldoConta) {
             this.saldoConta -= valor    
         }
+        console.log('saldo insuficiente')
     }
 }
 
@@ -50,6 +51,14 @@ class ContaPF extends Conta {//heredan caracteristicas da conta pai
         console.log(`CPF: ${this.cpf}`)
         console.log('------------------------')
     }
+
+    public deposito(valor: number) {
+        if (valor > 1000) {
+            console.log('deposito não permitido')
+        } else {
+            super.deposito(valor)
+        }
+    }
 }
 
 class ContaPJ extends Conta {//heredan caracteristicas da conta pai
@@ -66,6 +75,14 @@ class ContaPJ extends Conta {//heredan caracteristicas da conta pai
         console.log(`CNPJ: ${this.cnpj}`)
         console.log('------------------------')
     }
+
+    public deposito(valor: number) {
+        if (valor > 10000) {
+            console.log('deposito não permitido')
+        } else {
+            super.deposito(valor)
+        }
+    }
 }
 
 const conta1 = new Conta('Breno')
@@ -75,6 +92,17 @@ const conta3 = new ContaPJ(123124, 'Zuleide')
 // console.log(conta1, conta2)
 
 //conta1.info()
-conta2.info()
-conta3.info()
+// conta2.info()
+// conta3.info()
+
+conta2.deposito(800)
+conta2.deposito(200)
+conta2.deposito(1000)
+console.log(conta2.saldo())
+
+conta3.deposito(10000)
+conta3.deposito(10000)
+conta3.deposito(10000)
+conta3.deposito(10001)
+console.log(conta3.saldo())
 

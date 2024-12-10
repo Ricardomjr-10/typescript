@@ -28,6 +28,7 @@ class Conta {
         if (valor >= this.saldoConta) {
             this.saldoConta -= valor;
         }
+        console.log('saldo insuficiente');
     }
 }
 class ContaPF extends Conta {
@@ -43,6 +44,14 @@ class ContaPF extends Conta {
         console.log(`CPF: ${this.cpf}`);
         console.log('------------------------');
     }
+    deposito(valor) {
+        if (valor > 1000) {
+            console.log('deposito não permitido');
+        }
+        else {
+            super.deposito(valor);
+        }
+    }
 }
 class ContaPJ extends Conta {
     cnpj;
@@ -57,11 +66,28 @@ class ContaPJ extends Conta {
         console.log(`CNPJ: ${this.cnpj}`);
         console.log('------------------------');
     }
+    deposito(valor) {
+        if (valor > 10000) {
+            console.log('deposito não permitido');
+        }
+        else {
+            super.deposito(valor);
+        }
+    }
 }
 const conta1 = new Conta('Breno');
 const conta2 = new ContaPF(1231212, 'Rafael');
 const conta3 = new ContaPJ(123124, 'Zuleide');
 // console.log(conta1, conta2)
 //conta1.info()
-conta2.info();
-conta3.info();
+// conta2.info()
+// conta3.info()
+conta2.deposito(800);
+conta2.deposito(200);
+conta2.deposito(1000);
+console.log(conta2.saldo());
+conta3.deposito(10000);
+conta3.deposito(10000);
+conta3.deposito(10000);
+conta3.deposito(10001);
+console.log(conta3.saldo());
