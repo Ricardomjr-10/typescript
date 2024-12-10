@@ -30,6 +30,10 @@ class Conta {
     }
 
     protected saque(valor: number) {
+        if (valor < 0) {
+            console.log('valor invalido')
+            return
+        }
         if (valor >= this.saldoConta) {
             this.saldoConta -= valor    
         }
@@ -59,6 +63,14 @@ class ContaPF extends Conta {//heredan caracteristicas da conta pai
             super.deposito(valor)
         }
     }
+
+    public saque (valor:number) {
+        if (valor > 1000) {
+            console.log('saque não permitido, limite de saque R$ 1000')
+        }else {
+            super.saque(valor)
+        }
+    }
 }
 
 class ContaPJ extends Conta {//heredan caracteristicas da conta pai
@@ -81,6 +93,14 @@ class ContaPJ extends Conta {//heredan caracteristicas da conta pai
             console.log('deposito não permitido')
         } else {
             super.deposito(valor)
+        }
+    }
+
+    public saque (valor:number) {
+        if (valor > 10000) {
+            console.log('saque não permitido, limite de saque R$ 10000')
+        } else {
+            super.saque(valor)
         }
     }
 }

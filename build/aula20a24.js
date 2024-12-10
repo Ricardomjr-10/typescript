@@ -25,6 +25,10 @@ class Conta {
         this.saldoConta += valor;
     }
     saque(valor) {
+        if (valor < 0) {
+            console.log('valor invalido');
+            return;
+        }
         if (valor >= this.saldoConta) {
             this.saldoConta -= valor;
         }
@@ -52,6 +56,14 @@ class ContaPF extends Conta {
             super.deposito(valor);
         }
     }
+    saque(valor) {
+        if (valor > 1000) {
+            console.log('saque não permitido, limite de saque R$ 1000');
+        }
+        else {
+            super.saque(valor);
+        }
+    }
 }
 class ContaPJ extends Conta {
     cnpj;
@@ -72,6 +84,14 @@ class ContaPJ extends Conta {
         }
         else {
             super.deposito(valor);
+        }
+    }
+    saque(valor) {
+        if (valor > 10000) {
+            console.log('saque não permitido, limite de saque R$ 10000');
+        }
+        else {
+            super.saque(valor);
         }
     }
 }
