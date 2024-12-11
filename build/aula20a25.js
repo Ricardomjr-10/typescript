@@ -30,7 +30,7 @@ class Conta {
             console.log('valor invalido');
             return;
         }
-        this.saldoConta += valor;
+        this.saldo += valor;
     }
     saque(valor) {
         if (valor < 0) {
@@ -38,7 +38,7 @@ class Conta {
             return;
         }
         if (valor <= this.saldoConta) {
-            this.saldoConta -= valor;
+            this.saldo -= valor;
         }
         else {
             console.log('saldo insuficiente');
@@ -118,7 +118,7 @@ conta2.deposito(1000);
 conta2.saque(1000);
 // conta2.saque(1000)
 // conta2.saque(10)
-conta1.saldo = 300;
+//conta2.saldo = 300 // valr setado diretamente
 console.log(conta2.saldo); //nao precisa dos paraenteses, por causa do get
 // conta3.deposito(10000)
 // conta3.deposito(10000)
