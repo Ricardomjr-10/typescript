@@ -4,16 +4,24 @@ interface curso1 {
     des: string,
     aula: number,
     maxAlunos?: number, // ? - deixa a propriedade maxAlunos opcional
-    iniciarCurso(teste: string):void
+    iniciarCurso?(teste: string):void
 }
+
+interface cursoProg extends curso1 {
+    aulas:number,
+    maxAlunos?: number
+}
+
+interface cursoArtes extends curso1 {
+    aulas:number,
+    maxAlunos?: number
+}
+
 
 let curso1: curso1 // permitir que a variavel curso1 seja do tipo curso1
 let curso2: curso1
 let curso3: curso1
 
-function iniciarCurso(t:string):void {
-    console.log('teste')
-}
 
 // let curso2: {
 //     titulo: string,
@@ -26,7 +34,10 @@ curso1 = {
     titulo: 'typeScript',
     des: 'curso de typescript',
     aula: 12,
-    maxAlunos: 30
+    maxAlunos: 30,
+    iniciarCurso(test: string) {
+        console.log('test')
+    }
 }
 
 curso2 = {
