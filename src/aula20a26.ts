@@ -53,12 +53,21 @@ abstract class Conta { // clase abstrata
     }
 }
 
-class ContaPF extends Conta {//heredan caracteristicas da conta pai
+interface Tributos { // interface
+    taxaCalculo: number
+    calcularTrib(valor:number):number
+}
+
+class ContaPF extends Conta implements Tributos{//heredan caracteristicas da conta pai
+    taxaCalculo = 10                            // implements da interface obrigando a colocar od dados da interface
     cpf: number
     constructor(cpf: number, titular: string) {
         super(titular)
         this.cpf = cpf
         console.log(`Conta PF criada:${titular}`) // atraves do proteced permiti o acesso
+    }
+    calcularTrib(valor: number): number {
+        return valor * this.taxaCalculo 
     }
 
     info() {

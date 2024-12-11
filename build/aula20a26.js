@@ -47,11 +47,15 @@ class Conta {
     }
 }
 class ContaPF extends Conta {
+    taxaCalculo = 10; // implements da interface obrigando a colocar od dados da interface
     cpf;
     constructor(cpf, titular) {
         super(titular);
         this.cpf = cpf;
         console.log(`Conta PF criada:${titular}`); // atraves do proteced permiti o acesso
+    }
+    calcularTrib(valor) {
+        return valor * this.taxaCalculo;
     }
     info() {
         console.log('tipo: PF');

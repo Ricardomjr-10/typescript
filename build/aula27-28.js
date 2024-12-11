@@ -11,7 +11,7 @@ let curso3;
 curso1 = {
     titulo: 'typeScript',
     des: 'curso de typescript',
-    aula: 12,
+    aulas: 12,
     maxAlunos: 30,
     iniciarCurso(test) {
         console.log('test');
@@ -20,13 +20,13 @@ curso1 = {
 curso2 = {
     titulo: 'javascript',
     des: 'curso de javascript',
-    aula: 120,
+    aulas: 120,
     maxAlunos: 60
 };
 curso3 = {
     titulo: 'python',
     des: 'curso de python',
-    aula: 100,
+    aulas: 100,
 };
 console.log(curso1);
 console.log(curso2);
