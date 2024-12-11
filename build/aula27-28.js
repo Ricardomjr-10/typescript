@@ -2,6 +2,9 @@
 let curso1; // permitir que a variavel curso1 seja do tipo curso1
 let curso2;
 let curso3;
+function iniciarCurso(t) {
+    console.log('teste');
+}
 // let curso2: {
 //     titulo: string,
 //     des: string,
