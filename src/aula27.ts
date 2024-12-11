@@ -6,6 +6,10 @@ interface curso1 {
     maxAlunos: number,
 }
 
+let curso1: curso1
+let curso2: curso1
+let curso3: curso1
+
 // let curso2: {
 //     titulo: string,
 //     des: string,
@@ -20,11 +24,18 @@ curso1 = {
     maxAlunos: 30
 }
 
-// curso2 = {
-//     titulo: 'javascript',
-//     des: 'curso de javascript',
-//     aula: 120,
-//     maxAlunos: 60
-// }
+curso2 = {
+    titulo: 'javascript',
+    des: 'curso de javascript',
+    aula: 120,
+    maxAlunos: 60
+}
+
+curso3 = {
+    titulo: 'python',
+    des: 'curso de python',
+    aula: 100,
+    maxAlunos: 60
+}
 
 console.log(curso1)

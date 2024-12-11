@@ -1,4 +1,7 @@
 "use strict";
+let curso1;
+let curso2;
+let curso3;
 // let curso2: {
 //     titulo: string,
 //     des: string,
@@ -11,10 +14,16 @@ curso1 = {
     aula: 12,
     maxAlunos: 30
 };
-// curso2 = {
-//     titulo: 'javascript',
-//     des: 'curso de javascript',
-//     aula: 120,
-//     maxAlunos: 60
-// }
+curso2 = {
+    titulo: 'javascript',
+    des: 'curso de javascript',
+    aula: 120,
+    maxAlunos: 60
+};
+curso3 = {
+    titulo: 'python',
+    des: 'curso de python',
+    aula: 100,
+    maxAlunos: 60
+};
 console.log(curso1);
