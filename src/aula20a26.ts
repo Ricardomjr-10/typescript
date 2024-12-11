@@ -3,7 +3,7 @@
 //setter e getter - setter setar o valor da propriedade, getter obter o valor da propriedade
 //classe abstrata - classe que nao pode ser instanciada
 abstract class Conta { // clase abstrata
-    protected numero: number
+    private readonly numero: number // nao pode ser alterado somente dentro da classe, somente leitura
     protected titular: string
     private saldoConta: number
 

@@ -4,7 +4,7 @@
 //setter e getter - setter setar o valor da propriedade, getter obter o valor da propriedade
 //classe abstrata - classe que nao pode ser instanciada
 class Conta {
-    numero;
+    numero; // nao pode ser alterado somente dentro da classe, somente leitura
     titular;
     saldoConta;
     constructor(titular) {
