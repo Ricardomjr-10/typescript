@@ -1,5 +1,5 @@
 "use strict";
-let curso1;
+let curso1; // permitir que a variavel curso1 seja do tipo curso1
 let curso2;
 let curso3;
 // let curso2: {
@@ -24,6 +24,7 @@ curso3 = {
     titulo: 'python',
     des: 'curso de python',
     aula: 100,
-    maxAlunos: 60
 };
 console.log(curso1);
+console.log(curso2);
+console.log(curso3);

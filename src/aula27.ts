@@ -3,10 +3,10 @@ interface curso1 {
     titulo: string,
     des: string,
     aula: number,
-    maxAlunos: number,
+    maxAlunos?: number, // ? - deixa a propriedade maxAlunos opcional
 }
 
-let curso1: curso1
+let curso1: curso1 // permitir que a variavel curso1 seja do tipo curso1
 let curso2: curso1
 let curso3: curso1
 
@@ -35,7 +35,8 @@ curso3 = {
     titulo: 'python',
     des: 'curso de python',
     aula: 100,
-    maxAlunos: 60
 }
 
 console.log(curso1)
+console.log(curso2)
+console.log(curso3)
