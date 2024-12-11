@@ -1,0 +1,1 @@
+// interface - objetos literais
