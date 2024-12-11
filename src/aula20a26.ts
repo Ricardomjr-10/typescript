@@ -1,6 +1,7 @@
 //herança - classe que herda as mesmas caracteristicas da casse pai
 //acessando clase privada
 //setter e getter - setter setar o valor da propriedade, getter obter o valor da propriedade
+//classe abstrata - classe que nao pode ser instanciada
 class Conta {
     protected numero: number
     protected titular: string
