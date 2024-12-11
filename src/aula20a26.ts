@@ -2,7 +2,7 @@
 //acessando clase privada
 //setter e getter - setter setar o valor da propriedade, getter obter o valor da propriedade
 //classe abstrata - classe que nao pode ser instanciada
-class Conta {
+abstract class Conta { // clase abstrata
     protected numero: number
     protected titular: string
     private saldoConta: number
@@ -117,7 +117,7 @@ class ContaPJ extends Conta {//heredan caracteristicas da conta pai
     }
 }
 
-const conta1 = new Conta('Breno')
+//const conta1 = new Conta('Breno')// nao pode instanciar uma classe abstrata
 const conta2 = new ContaPF(1231212, 'Rafael')
 const conta3 = new ContaPJ(123124, 'Zuleide')
 

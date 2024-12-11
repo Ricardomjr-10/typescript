@@ -106,7 +106,7 @@ class ContaPJ extends Conta {
         }
     }
 }
-const conta1 = new Conta('Breno');
+//const conta1 = new Conta('Breno')// nao pode instanciar uma classe abstrata
 const conta2 = new ContaPF(1231212, 'Rafael');
 const conta3 = new ContaPJ(123124, 'Zuleide');
 // console.log(conta1, conta2)
