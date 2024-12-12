@@ -1,5 +1,5 @@
 //modulos- export e import
-import { Pessoa, Objeto, Coisas } from './Classes' // importando do arquivo Classes
+import Pessoa, {Objeto, Coisas } from './Classes' // importando do arquivo Classes
 
 const p1 = new Pessoa('bruno', 1.80)
 const o1 = new Objeto('tiago')

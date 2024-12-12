@@ -1,6 +1,6 @@
-export const Coisas = ['Corda', 'pilha', 'mochila']
+const Coisas = ['Corda', 'pilha', 'mochila']
 
-export class Pessoa {
+class Pessoa {
     nome:string
     altura:number
     constructor(nome:string, altura:number) {
@@ -9,9 +9,12 @@ export class Pessoa {
     }
 }
 
-export class Objeto {
+class Objeto {
     nome:string
     constructor(nome:string) {
         this.nome = nome
     }
 }
+
+export default Pessoa
+export {Coisas, Objeto}
