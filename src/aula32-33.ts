@@ -26,7 +26,3 @@ namespace Motores {
     }
 }
 
-const carro1 = new Veiculos.Carro('Ferrari')
-
-console.log(carro1.nome)
-console.log(carro1.motor)
