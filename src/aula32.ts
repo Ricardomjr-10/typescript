@@ -1,6 +1,6 @@
 //namespaces - agrupamento de classes e metodos dentro de um espaco especifico
 namespace Veiculos {
-    class Carro {
+    export class Carro {// é preciso usar o export para exportar a classe, por causa do namespace
         nome:string
         constructor(nome:string) {
             this.nome = nome
@@ -16,3 +16,7 @@ namespace Motores {
         }
     }
 }
+
+const carro1 = new Veiculos.Carro('Ferrari')
+
+console.log(carro1.nome)

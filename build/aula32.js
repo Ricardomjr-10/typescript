@@ -8,6 +8,7 @@ var Veiculos;
             this.nome = nome;
         }
     }
+    Veiculos.Carro = Carro;
 })(Veiculos || (Veiculos = {}));
 var Motores;
 (function (Motores) {
@@ -18,3 +19,5 @@ var Motores;
         }
     }
 })(Motores || (Motores = {}));
+const carro1 = new Veiculos.Carro('Ferrari');
+console.log(carro1.nome);
