@@ -6,3 +6,10 @@ export class Pessoa {
         this.altura = altura
     }
 }
+
+export class Objeto {
+    nome:string
+    constructor(nome:string) {
+        this.nome = nome
+    }
+}
