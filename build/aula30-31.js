@@ -6,3 +6,4 @@ const p1 = new Classes_1.Pessoa('bruno', 1.80);
 const o1 = new Classes_1.Objeto('tiago');
 console.log(p1.nome);
 console.log(p1.altura);
+console.log(Classes_1.Coisas);
