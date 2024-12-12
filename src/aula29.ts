@@ -17,3 +17,4 @@ const ct1 = new C_teste<number>(10)
 const ct2 = new C_teste<string>('luiz')
 
 console.log(ct1.valor)
+console.log(ct2.valor)

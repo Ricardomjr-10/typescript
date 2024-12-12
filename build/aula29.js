@@ -15,3 +15,4 @@ class C_teste {
 const ct1 = new C_teste(10);
 const ct2 = new C_teste('luiz');
 console.log(ct1.valor);
+console.log(ct2.valor);
