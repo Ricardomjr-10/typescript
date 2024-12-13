@@ -1,11 +1,14 @@
 //namespaces - agrupamento de classes e metodos dentro de um espaco especifico
 namespace Veiculos {
+    enum Cores {'Preto', "Branco", "Azul", "Verde", "Vermelho"}
     export abstract class Carro {// é preciso usar o export para exportar a classe, por causa do namespace
         nome: string
         motor: Motores.Motor
-        constructor(nome: string) {
+        cor: Cores
+        constructor(nome: string,motor: Motores.Motor, cor: Cores) {
             this.nome = nome
-            this.motor = new Motores.Motor(3,100)
+            this.motor = motor
+            this.cor = cor
         }
     }
 }
