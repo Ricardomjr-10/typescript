@@ -21,3 +21,5 @@ const obj = {
 };
 let { cor1, cor2, cor3, cor4 } = obj;
 console.log(cor1, cor2, cor3, cor4);
+//outros exemplos
+let [nu1, nu2, nu3] = 10;
