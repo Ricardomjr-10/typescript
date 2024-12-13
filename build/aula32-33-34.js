@@ -86,3 +86,8 @@ var Motores;
 })(Motores || (Motores = {}));
 const carro1 = new Veiculos.CarroEsportivo("Ferrari", 0);
 const carro2 = new Veiculos.CarroPopular("Fiat", 1);
+console.log(`Nome: ${carro1.meuNome}`);
+console.log(`Cor: ${carro1.minhaCor}`);
+console.log(`Potencia: ${carro1.minhaPotencia}`);
+console.log(`Ligado: ${carro1.estouLigado}`);
+console.log('----------------------------------');
