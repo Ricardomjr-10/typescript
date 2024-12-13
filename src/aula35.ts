@@ -11,3 +11,7 @@ let av = [10,20,30,40]
 
 //desestruturacao de array
 let [aa,bb,cc,dd] = av
+let [aaa,bbb,ccc,ddd] = ["luiz", "maria", "joao", "pedro"]
+
+console.log(aa,bb,cc,dd)
+console.log(aaa,bbb,ccc,ddd)
