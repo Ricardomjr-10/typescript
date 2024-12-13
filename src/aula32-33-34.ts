@@ -76,3 +76,5 @@ namespace Motores {
     }
 }
 
+const carro1 = new Veiculos.CarroEsportivo("Ferrari", 0)
+const carro2 = new Veiculos.CarroPopular("Fiat", 1)
