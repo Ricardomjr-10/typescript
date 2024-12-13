@@ -2,13 +2,32 @@
 namespace Veiculos {
     enum Cores {'Preto', "Branco", "Azul", "Verde", "Vermelho"}
     export abstract class Carro {// é preciso usar o export para exportar a classe, por causa do namespace
-        nome: string
-        motor: Motores.Motor
-        cor: Cores
+        private nome: string
+        private motor: Motores.Motor
+        private cor: String
         constructor(nome: string,motor: Motores.Motor, cor: Cores) {
             this.nome = nome
             this.motor = motor
-            this.cor = cor
+            this.cor = Cores[cor]
+        }
+        public ligar() {
+            this.motor.liga = true
+        }
+
+        public desligar() {
+            this.motor.liga = false
+        }
+        get minhaCor() {
+            return this.cor
+        }
+        get meuNome(){
+            return this.nome
+        }
+        get estouLigado(){
+            return (this.motor.liga? "sim" : "nao")
+        }
+        get minhaPotencia(){
+            return this.motor.potencia
         }
     }
 }
