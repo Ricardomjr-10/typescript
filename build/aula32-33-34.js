@@ -40,7 +40,7 @@ var Veiculos;
     }
     class CarroEsportivo extends Carro {
         constructor(nome, cor) {
-            super(nome, new Motores.Motor(6, 300), 2);
+            super(nome, new Motores.Motor(6, 300, new Motores.Turbo(100)), 2);
         }
     }
     Veiculos.CarroEsportivo = CarroEsportivo;
@@ -56,6 +56,7 @@ var Motores;
             return this.pot;
         }
     }
+    Motores.Turbo = Turbo;
     class Motor {
         ligado;
         cilindros;

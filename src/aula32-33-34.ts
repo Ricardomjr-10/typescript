@@ -33,14 +33,14 @@ namespace Veiculos {
 
     export class CarroEsportivo extends Carro {
         constructor(nome:string, cor: Cores){
-            super(nome, new Motores.Motor(6, 300), 2)
+            super(nome, new Motores.Motor(6, 300, new Motores.Turbo(100)), 2)
         }
     }
 }
 
 namespace Motores {
 
-    class Turbo {
+    export class Turbo {
         private pot: number
         constructor(pot: number) {
             this.pot = pot
