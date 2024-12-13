@@ -33,13 +33,13 @@ namespace Veiculos {
 
     export class CarroEsportivo extends Carro {
         constructor(nome:string, cor: Cores){
-            super(nome, new Motores.Motor(6, 300, new Motores.Turbo(100)), 2)
+            super(nome, new Motores.Motor(6, 300, new Motores.Turbo(100)), 0)
         }
     }
 
     export class CarroPopular extends Carro {
         constructor(nome:string, cor: Cores){
-            super(nome, new Motores.Motor(3,100), 3)
+            super(nome, new Motores.Motor(3,100), 1)
         }
     }
 }
@@ -76,11 +76,19 @@ namespace Motores {
     }
 }
 
-const carro1 = new Veiculos.CarroEsportivo("Ferrari", 0)
-const carro2 = new Veiculos.CarroPopular("Fiat", 1)
+const carro1 = new Veiculos.CarroEsportivo("Ferrari",0)
+const carro2 = new Veiculos.CarroPopular("Fiat",2)
+
+carro1.ligar()
+carro2.ligar()
 
 console.log(`Nome: ${carro1.meuNome}`)
 console.log(`Cor: ${carro1.minhaCor}`)
 console.log(`Potencia: ${carro1.minhaPotencia}`)
 console.log(`Ligado: ${carro1.estouLigado}`)
+console.log('----------------------------------')
+console.log(`Nome: ${carro2.meuNome}`)
+console.log(`Cor: ${carro2.minhaCor}`)
+console.log(`Potencia: ${carro2.minhaPotencia}`)
+console.log(`Ligado: ${carro2.estouLigado}`)
 console.log('----------------------------------')
