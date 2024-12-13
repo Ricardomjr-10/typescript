@@ -44,6 +44,12 @@ var Veiculos;
         }
     }
     Veiculos.CarroEsportivo = CarroEsportivo;
+    class CarroPopular extends Carro {
+        constructor(nome, cor) {
+            super(nome, new Motores.Motor(3, 100), 3);
+        }
+    }
+    Veiculos.CarroPopular = CarroPopular;
 })(Veiculos || (Veiculos = {}));
 var Motores;
 (function (Motores) {

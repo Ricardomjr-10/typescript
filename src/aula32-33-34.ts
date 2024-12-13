@@ -36,6 +36,12 @@ namespace Veiculos {
             super(nome, new Motores.Motor(6, 300, new Motores.Turbo(100)), 2)
         }
     }
+
+    export class CarroPopular extends Carro {
+        constructor(nome:string, cor: Cores){
+            super(nome, new Motores.Motor(3,100), 3)
+        }
+    }
 }
 
 namespace Motores {
