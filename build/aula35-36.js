@@ -31,4 +31,11 @@ console.log(nu4, nu5, nu6);
 const fCores = () => {
     return ["azul", "vermelho", "amarelo", "verde"];
 };
-let [core1, c2, c3, c4] = fCores();
+let [co1, co2, co3, co4] = fCores();
+console.log(co1, co2, co3, co4);
+//desestruturacao de texto - string
+let texto = "Curso de typescript";
+let [...t] = texto.split(" ");
+let [t1, t2, t3] = texto.split(" ");
+console.log(t);
+console.log(t1, t2, t3);
