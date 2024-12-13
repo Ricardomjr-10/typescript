@@ -21,5 +21,14 @@ const obj = {
 };
 let { cor1, cor2, cor3, cor4 } = obj;
 console.log(cor1, cor2, cor3, cor4);
-//outros exemplos
-let [nu1, nu2, nu3] = 10;
+//outros exemplos - somente um valor
+let [nu1 = 0, nu2 = 0, nu3 = 0] = [10];
+//com spread
+let [nu4, nu5, ...nu6] = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+console.log(nu1, nu2, nu3);
+console.log(nu4, nu5, nu6);
+// desestruturacao de funcao
+const fCores = () => {
+    return ["azul", "vermelho", "amarelo", "verde"];
+};
+let [core1, c2, c3, c4] = fCores();
