@@ -51,3 +51,4 @@ let [...t] = texto.split(" ")
 let [t1, t2, t3] = texto.split(" ")
 console.log(t)
 console.log(t1, t2, t3)
+
