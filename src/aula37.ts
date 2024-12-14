@@ -1,9 +1,8 @@
-//static poo - propriedades ou  metodos estaticos - menbros associados a classe e nao a instancia
-//mesmo endereço de memoria - apontando para o mesmo endereço de memoria
-//globais
+
 
 import { Globais} from './globais'
 
+Globais.teste = 10 // nao precisa instaciar, pois é static
+
 console.log(Globais.teste)
 
-Globais.teste = 10
