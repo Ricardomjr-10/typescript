@@ -20,15 +20,18 @@ class ContaBancaria {
     sacar(valor: number) {
         if (this.saldo >= valor) {
             this.saldo -= valor
+            console.log(`saque realizado com sucesso. Novo saldo: ${this.saldo}`)
         } else {
             console.log("Saldo insuficiente")
         }
     }
     depositar(valor: number) {
         this.saldo += valor
+        console.log(`deposito realizado com sucesso. Novo saldo: ${this.saldo}`)
     }
     exibirSaldo() {
-        console.log(this.saldo)
+        console.log(`Saldo atual: ${this.saldo}`)
+
     }
 }
 
