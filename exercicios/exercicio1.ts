@@ -20,8 +20,24 @@ class Cachorro {
     latir() {
         console.log("Au au!")
     }
+    comer() {
+        if (this.raca === 'Labrador') {
+            console.log(`O cachorro ${this.raca} esta comendo.`)
+        } else if (this.raca === 'Poodle') {
+            console.log(`O cachorro ${this.raca} esta comendo.`)
+        } else {
+            console.log(`O cachorro ${this.raca} esta comendo.`)
+        }
+    }
 }
+//Exercício 1: Adicione um método comer() que imprime uma mensagem diferente 
+// dependendo da raça do cachorro.
 
 const cachorro = new Cachorro("Rex", "Labrador", 3)
+const cachorro2 = new Cachorro("Toby", "Poodle", 2)
+const cachorro3 = new Cachorro("Fido", "Golden Retriever", 4)
 
 cachorro.latir()
+cachorro.comer()
+cachorro2.comer()
+cachorro3.comer()

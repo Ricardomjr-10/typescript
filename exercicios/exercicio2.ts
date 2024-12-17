@@ -31,15 +31,33 @@ class ContaBancaria {
     }
     exibirSaldo() {
         console.log(`Saldo atual: ${this.saldo}`)
-
     }
+    transferir(contaDestino: ContaBancaria, valor: number) {
+        if (this.saldo >= valor) {
+            this.saldo -= valor
+            contaDestino.saldo += valor
+            console.log(`transferencia entre as contas ${this.numeroConta} e ${contaDestino.numeroConta} realizada com sucesso.`)
+        }
+    }
+
 }
+//Exercício 2: Implemente um método transferir(contaDestino: ContaBancaria, valor: number)
+//  para transferir dinheiro entre contas
 
 const novaConta = new ContaBancaria(123, 1000)
+const conta1 = new ContaBancaria(456, 2000)
+const conta2 = new ContaBancaria(789, 3000)
 
 novaConta.sacar(500)
 novaConta.sacar(500)
 
 novaConta.depositar(2000)
+novaConta.sacar(1000)
+
+conta1.transferir(conta2, 500)
+conta2.transferir(novaConta, 1000)
+conta2.transferir(conta1, 500)
 
 novaConta.exibirSaldo()
+conta1.exibirSaldo()
+conta2.exibirSaldo()
