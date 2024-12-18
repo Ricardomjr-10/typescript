@@ -18,3 +18,27 @@ class Veiculo {
         console.log(`O veiculo ${this.modelo} acelerou.`)
     }
 }
+
+class Carro extends Veiculo {
+    numeroPortas : number
+    constructor(marca: string, modelo: string, ano: number, numeroPortas: number) {
+        super(marca, modelo, ano)
+        this.numeroPortas = numeroPortas
+    }
+}
+
+class Moto extends Veiculo {
+    cilindradas: number
+    constructor(marca: string, modelo: string, ano: number, cilindradas: number) {
+        super(marca, modelo, ano)
+        this.cilindradas = cilindradas
+    }
+}
+
+class Caminhao extends Veiculo {
+    eixos: number
+    constructor(marca: string, modelo: string, ano: number, eixos: number) {
+        super(marca, modelo, ano)
+        this.eixos = eixos
+    }
+}
