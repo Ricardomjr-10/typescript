@@ -15,7 +15,11 @@ class Veiculo {
         this.ano = ano
     }
     acelerar () {
-        console.log(`O veiculo ${this.modelo} acelerou.`)
+        if (this.constructor.prototype.constructor.name=== 'Moto') {
+            console.log(`A moto ${this.modelo} acelerou.`)
+            return
+        }
+            console.log(`O veiculo ${this.modelo} acelerou.`)
     }
 }
 
@@ -44,7 +48,12 @@ class Caminhao extends Veiculo {
 }
 
 const carro = new Carro('chevrolet', 'onix', 2018, 4)
-
+carro.acelerar()
 const moto = new Moto('honda', 'CG', 2012, 125)
-
+moto.acelerar()
 const caminhao = new Caminhao('volvo', 'FH', 2010, 2)
+caminhao.acelerar()
+
+console.log(carro)
+console.log(moto)
+console.log(caminhao)
