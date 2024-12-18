@@ -54,4 +54,8 @@ const circulo = new Circulo(5)
 const quadrado = new Quadrado(5)
 const retangulo = new Retangulo(5, 10)
 
-console.log(circulo.calcularArea())
+console.log(Math.round(circulo.calcularPerimetro()), circulo.calcularArea())
+
+console.log(quadrado.calcularPerimetro(), quadrado.calcularArea())
+
+console.log(retangulo.calcularPerimetro(), retangulo.calcularArea())
