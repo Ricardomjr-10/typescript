@@ -42,3 +42,9 @@ class Caminhao extends Veiculo {
         this.eixos = eixos
     }
 }
+
+const carro = new Carro('chevrolet', 'onix', 2018, 4)
+
+const moto = new Moto('honda', 'CG', 2012, 125)
+
+const caminhao = new Caminhao('volvo', 'FH', 2010, 2)
